@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar de Nichos</title>
+<style>
+:root{
+  --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --line:#2a2f3a; --txt:#e8eaef; --mut:#8b93a3;
+  --fire:#ff6a3d; --rocket:#3dd6a8; --strong:#6aa8ff; --gold:#ffc857; --chip:#252a35;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){--bg:#f4f5f8;--panel:#fff;--panel2:#f0f2f6;--line:#dde1e8;--txt:#151820;--mut:#5d6575;--chip:#e9ecf2}
+}
+:root[data-theme="light"]{--bg:#f4f5f8;--panel:#fff;--panel2:#f0f2f6;--line:#dde1e8;--txt:#151820;--mut:#5d6575;--chip:#e9ecf2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+.top{display:flex;align-items:center;gap:14px;padding:14px 0 10px;flex-wrap:wrap}
+h1{font-size:20px;margin:0;letter-spacing:.2px}
+h1 span{color:var(--fire)}
+.upd{color:var(--mut);font-size:12.5px}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:10px}
+.tab{background:none;border:1px solid transparent;color:var(--mut);padding:7px 12px;border-radius:999px;cursor:pointer;font:inherit;white-space:nowrap}
+.tab.on{background:var(--chip);color:var(--txt);border-color:var(--line)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:18px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi b{display:block;font-size:24px}
+.kpi small{color:var(--mut)}
+.filtros{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px;align-items:center}
+select,input{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:7px 9px;font:inherit}
+input{min-width:200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card a{color:inherit;text-decoration:none}
+.thumb{position:relative;aspect-ratio:16/9;background:var(--panel2)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.badge{position:absolute;top:8px;left:8px;padding:3px 8px;border-radius:999px;font-size:11.5px;font-weight:600;color:#111}
+.b-padrao{background:var(--gold)} .b-explodindo{background:var(--fire)} .b-outlier{background:var(--rocket)} .b-forte{background:var(--strong)}
+.novo{position:absolute;top:8px;right:8px;background:var(--gold);color:#111;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700}
+.dur{position:absolute;bottom:8px;right:8px;background:#000c;color:#fff;padding:1px 6px;border-radius:4px;font-size:11.5px}
+.body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.t{font-weight:600;line-height:1.3}
+.c{color:var(--mut);font-size:12.5px}
+.stats{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.st{background:var(--chip);border-radius:6px;padding:2px 7px;font-size:12px}
+.st.hot{color:var(--fire);font-weight:600}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}
+th{color:var(--mut);font-weight:600;background:var(--panel2)}
+td.cel{text-align:center}
+.heat{display:inline-block;min-width:54px;padding:3px 6px;border-radius:6px}
+.tabwrap{overflow-x:auto}
+.lac{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.lac h3{margin:0 0 4px;font-size:15px}
+.arrow{color:var(--fire);font-weight:700}
+.vazio{color:var(--mut);padding:30px;text-align:center}
+.spark{display:flex;gap:3px;align-items:flex-end;height:38px}
+.spark i{display:block;width:8px;background:var(--fire);border-radius:2px;opacity:.85}
+.leg{color:var(--mut);font-size:12.5px;margin:-4px 0 14px}
+.sec{display:none}.sec.on{display:block}
+.mini{display:flex;gap:8px;align-items:center;margin-top:4px}
+.mini img{width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+footer{color:var(--mut);font-size:12px;padding:30px 0}
+details summary{cursor:pointer;margin-top:4px} details a{color:var(--txt)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><h1>Radar de <span>Nichos</span></h1><span class="upd" id="upd"></span></div>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-s="padrao">🎯 Seu critério</button>
+    <button class="tab" data-s="micro">🧬 Micronichos detectados</button>
+    <button class="tab" data-s="hoje">🆕 Novidades de hoje</button>
+    <button class="tab" data-s="explodindo">🔥 Canais novos explodindo</button>
+    <button class="tab" data-s="nichos">📊 Nichos × idiomas</button>
+    <button class="tab" data-s="lacunas">🌍 Demanda sem oferta</button>
+    <button class="tab" data-s="todos">📋 Todos</button>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <section class="sec on" id="s-padrao">
+    <p class="leg">O seu critério: canal que começou há até 20 dias, com até 10 vídeos e pelo menos 3 deles com 30 mil+ views. São vários vídeos fortes, não um viral isolado.</p>
+    <div class="filtros" id="f-padrao"></div>
+    <div class="grid" id="g-padrao"></div>
+  </section>
+
+  <section class="sec" id="s-micro">
+    <p class="leg">Expressões que aparecem nos títulos virais de 3 ou mais canais novos ao mesmo tempo. Cada uma é um micronicho que está pegando agora.</p>
+    <div class="filtros"><select id="mi-lg"><option value="">Todos os idiomas</option></select><input id="mi-q" placeholder="Buscar micronicho…"></div>
+    <div id="l-micro"></div>
+  </section>
+
+  <section class="sec" id="s-hoje">
+    <p class="leg">Canais que apareceram no radar pela primeira vez hoje, os melhores primeiro.</p>
+    <div class="grid" id="g-hoje"></div>
+  </section>
+
+  <section class="sec" id="s-explodindo">
+    <p class="leg">Canal com até 20 dias e um vídeo de 30 mil+ views postado este mês. É a prova viral mais forte.</p>
+    <div class="filtros" id="f-explodindo"></div>
+    <div class="grid" id="g-explodindo"></div>
+  </section>
+
+  <section class="sec" id="s-nichos">
+    <p class="leg">Quantos vídeos de 20 mil+ views este mês cada nicho tem em cada idioma (🔥 = canais novos explodindo). Cor mais forte = mais demanda. "Imitadores" = canais novos copiando os virais do nicho (nicho esquentando).</p>
+    <div class="tabwrap"><table id="t-nichos"></table></div>
+  </section>
+
+  <section class="sec" id="s-lacunas">
+    <p class="leg">Nicho forte num idioma e quase vazio em outro: a "demanda sem oferta". Sempre conferir se o tema faz sentido para o público de destino.</p>
+    <div id="l-lacunas"></div>
+  </section>
+
+  <section class="sec" id="s-todos">
+    <div class="filtros" id="f-todos"></div>
+    <div class="grid" id="g-todos"></div>
+  </section>
+  <footer>Só canais pequenos e recentes: começaram a postar há até 20 dias e têm até 100 mil inscritos. Dados do YouTube via yt-dlp + autocomplete, sem API paga e sem custo. 6 idiomas, 120+ nichos, micronichos automáticos, buscas do autocomplete e bola de neve de imitadores. Atualiza sozinho todo dia de manhã. Views são do momento da varredura.</footer>
+</main>
+
+<script src="dados.js"></script>
+<script>
+const R = window.RADAR;
+const $ = s => document.querySelector(s);
+const fmt = n => n==null ? "?" : n>=1e6 ? (n/1e6).toFixed(1).replace(".",",")+" mi" : n>=1e3 ? Math.round(n/1e3)+" mil" : String(n);
+const BAND = {pt:"🇧🇷",en:"🇺🇸",es:"🇪🇸",de:"🇩🇪",fr:"🇫🇷",it:"🇮🇹"};
+const TIPO = {padrao:"🎯 Seu critério", explodindo:"🔥 Canal novo explodindo", outlier:"🚀 Outlier", forte:"Forte"};
+const nomeTema = id => (R.nichos.find(n=>n.id===id)||{}).nome || id;
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+if(!R){ document.querySelector("main").innerHTML='<div class="vazio">A primeira varredura ainda está rodando. Atualize a página em alguns minutos.</div>'; }
+else init();
+
+function card(v){
+  const idade = v.idade!=null ? `canal com ${v.idade} dias` : (v.videos_mais ? "canal antigo (60+ vídeos)" : "");
+  return `<div class="card"><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">
+    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt="">
+      <span class="badge b-${v.tipo}">${TIPO[v.tipo]}</span>${v.novo_hoje?'<span class="novo">NOVO</span>':""}
+      <span class="dur">${String(v.dur).replace(".",",")} min</span></div></a>
+    <div class="body">
+      <a class="t" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">${esc(v.titulo)}</a>
+      <a class="c" href="https://www.youtube.com/channel/${v.cid}" target="_blank" rel="noopener">${BAND[v.idioma]} ${esc(v.canal)} · ${esc(nomeTema(v.tema))}</a>
+      <div class="stats">
+        <span class="st hot">${fmt(v.views)} views</span>
+        <span class="st">${fmt(v.inscritos)} inscritos</span>
+        <span class="st">${v.videos_mais?"60+":v.videos_canal} vídeos</span>
+        ${idade?`<span class="st">${idade}</span>`:""}
+        ${v.ratio?`<span class="st">${String(v.ratio).replace(".",",")}× inscritos</span>`:""}
+        <span class="st">${v.v30} vídeos 30k+ · ${v.v100} 100k+</span>
+        ${v.imitadores?`<span class="st hot">${v.imitadores} imitadores</span>`:""}
+      </div>
+      ${v.ultimos&&v.ultimos.length?`<details class="c"><summary>Últimos vídeos do canal</summary>${v.ultimos.map(u=>`<div>· <a href="https://www.youtube.com/watch?v=${u.id}" target="_blank" rel="noopener">${esc(u.t)}</a> — <b>${fmt(u.v)}</b></div>`).join("")}</details>`:""}
+    </div></div>`;
+}
+
+function filtros(alvo, fn){
+  const box = $(alvo);
+  box.innerHTML = `<select data-k="idioma"><option value="">Todos os idiomas</option>${Object.entries(R.idiomas).map(([k,v])=>`<option value="${k}">${BAND[k]} ${v}</option>`).join("")}</select>
+    <select data-k="tema"><option value="">Todos os nichos</option>${R.nichos.map(n=>`<option value="${n.id}">${esc(n.nome)}</option>`).join("")}</select>
+    <select data-k="dur"><option value="">Qualquer duração</option><option value="m">4–20 min</option><option value="l">20+ min</option></select>
+    <select data-k="insc"><option value="">Até 100 mil inscritos</option><option value="50000">Até 50 mil</option><option value="10000">Até 10 mil</option><option value="5000">Até 5 mil</option><option value="1000">Até 1 mil</option></select>
+    <select data-k="idade"><option value="">Canal com até 20 dias</option><option value="15">Até 15 dias</option><option value="10">Até 10 dias</option><option value="7">Até 7 dias</option></select>
+    <select data-k="ord"><option value="score">Melhor oportunidade</option><option value="views">Mais views</option><option value="ratio">Views ÷ inscritos</option><option value="idade">Canal mais novo</option></select>
+    <input data-k="q" placeholder="Buscar no título ou canal…">`;
+  box.addEventListener("input", fn);
+  return () => Object.fromEntries([...box.querySelectorAll("[data-k]")].map(e=>[e.dataset.k,e.value]));
+}
+
+function aplicar(lista, f){
+  let l = lista.filter(v => (!f.idioma||v.idioma===f.idioma) && (!f.tema||v.tema===f.tema)
+    && (!f.dur||(f.dur==="l"?v.longo:!v.longo))
+    && (!f.insc||(v.inscritos||0)<=+f.insc) && (!f.idade||(v.idade??999)<=+f.idade)
+    && (!f.q||(v.titulo+" "+v.canal).toLowerCase().includes(f.q.toLowerCase())));
+  const k = f.ord||"score";
+  l.sort((a,b)=> k==="idade" ? ((a.idade??9999)-(b.idade??9999)) : ((b[k]??0)-(a[k]??0)));
+  return l;
+}
+
+function render(id, lista){ $(id).innerHTML = lista.length ? lista.slice(0,150).map(card).join("") : '<div class="vazio">Nada por aqui hoje.</div>'; }
+
+function init(){
+  $("#upd").textContent = "Atualizado em " + R.gerado;
+  const V = R.videos, pad = V.filter(v=>v.tipo==="padrao"), exp = V.filter(v=>v.tipo==="explodindo"||v.tipo==="padrao"), novos = V.filter(v=>v.novo_hoje);
+  const max = Math.max(...R.serie.map(s=>s.explodindo),1);
+  $("#kpis").innerHTML = `
+    <div class="kpi"><small>🎯 Canais no seu critério</small><b>${new Set(pad.map(v=>v.cid)).size}</b></div>
+    <div class="kpi"><small>Vídeos com 20 mil+ este mês</small><b>${V.length}</b></div>
+    <div class="kpi"><small>🔥 Canais novos explodindo</small><b>${new Set(exp.map(v=>v.cid)).size}</b></div>
+    <div class="kpi"><small>🆕 Canais novos no radar hoje</small><b>${new Set(novos.map(v=>v.cid)).size}</b></div>
+    <div class="kpi"><small>🧬 Micronichos detectados</small><b>${(R.micronichos||[]).length}</b></div>
+    <div class="kpi"><small>🌍 Lacunas entre idiomas</small><b>${R.nichos.reduce((a,n)=>a+n.lacunas.length,0)}</b></div>
+    <div class="kpi"><small>🔥 por dia (últimos ${R.serie.length})</small><div class="spark">${R.serie.map(s=>`<i title="${s.data}: ${s.explodindo}" style="height:${6+32*s.explodindo/max}px"></i>`).join("")}</div></div>`;
+
+  // hoje: melhor vídeo de cada canal novo
+  const porCanal = l => { const m=new Map(); l.forEach(v=>{ if(!m.has(v.cid)) m.set(v.cid,v); }); return [...m.values()]; };
+  render("#g-hoje", porCanal(novos));
+  const fp = filtros("#f-padrao", ()=>render("#g-padrao", porCanal(aplicar(pad, fp())))); render("#g-padrao", porCanal(aplicar(pad, fp())));
+  const fe = filtros("#f-explodindo", ()=>render("#g-explodindo", porCanal(aplicar(exp, fe())))); render("#g-explodindo", porCanal(aplicar(exp, fe())));
+  const ft = filtros("#f-todos", ()=>render("#g-todos", aplicar(V, ft()))); render("#g-todos", aplicar(V, ft()));
+
+  // nichos × idiomas
+  const maxN = Math.max(...R.nichos.flatMap(n=>Object.values(n.por).map(p=>p.n)),1);
+  const L = Object.keys(R.idiomas);
+  $("#t-nichos").innerHTML = `<tr><th>Nicho</th>${L.map(l=>`<th class="cel">${BAND[l]} ${R.idiomas[l]}</th>`).join("")}<th class="cel">Views somadas</th><th class="cel">Imitadores</th></tr>` +
+    R.nichos.map(n=>`<tr><td><b>${esc(n.nome)}</b></td>${L.map(l=>{const p=n.por[l]; const a=(p.n/maxN);
+      return `<td class="cel"><span class="heat" style="background:rgba(255,106,61,${0.08+a*0.75})">${p.n}${p.explodindo?` · 🔥${p.explodindo}`:""}</span></td>`}).join("")}<td class="cel">${fmt(n.total)}</td><td class="cel">${n.imitadores||0}</td></tr>`).join("");
+
+  // lacunas
+  const lac = R.nichos.filter(n=>n.lacunas.length);
+  $("#l-lacunas").innerHTML = lac.length ? lac.map(n=>{
+    const ex = V.filter(v=>v.tema===n.id).slice(0,3);
+    return `<div class="lac"><h3>${esc(n.nome)}</h3>
+      <div>${n.lacunas.map(x=>`${BAND[x.de]} ${R.idiomas[x.de]} <span class="arrow">→</span> ${BAND[x.para]} ${R.idiomas[x.para]}`).join(" &nbsp;·&nbsp; ")}</div>
+      <div class="c">Forte em: ${L.filter(l=>n.por[l].n>=5||n.por[l].explodindo).map(l=>`${BAND[l]} ${n.por[l].n} vídeos`).join(", ")}</div>
+      ${ex.map(v=>`<a class="mini" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt=""><span class="c">${BAND[v.idioma]} ${esc(v.titulo)} · <b>${fmt(v.views)}</b></span></a>`).join("")}
+    </div>`}).join("") : '<div class="vazio">Nenhuma lacuna clara hoje.</div>';
+
+  // micronichos
+  const M = R.micronichos||[];
+  $("#mi-lg").innerHTML += Object.entries(R.idiomas).map(([k,v])=>`<option value="${k}">${BAND[k]} ${v}</option>`).join("");
+  const rMicro = ()=>{ const lg=$("#mi-lg").value, q=$("#mi-q").value.toLowerCase();
+    const l = M.filter(m=>(!lg||m.idioma===lg)&&(!q||(m.expr+" "+(m.variacoes||[]).join(" ")).includes(q)));
+    $("#l-micro").innerHTML = l.length ? l.map(m=>`<div class="lac"><h3>${BAND[m.idioma]} “${esc(m.expr)}”</h3>
+      ${m.variacoes&&m.variacoes.length?`<div class="c">Também aparece como: ${m.variacoes.map(x=>"“"+esc(x)+"”").join(", ")}</div>`:""}
+      <div class="c"><b class="arrow">${m.canais} canais novos</b> · ${fmt(m.views)} views somadas · ${m.temas.map(nomeTema).map(esc).join(", ")}</div>
+      ${m.exemplos.map(v=>`<a class="mini" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" alt=""><span class="c">${esc(v.titulo)} · ${esc(v.canal)} · <b>${fmt(v.views)}</b></span></a>`).join("")}
+    </div>`).join("") : '<div class="vazio">Nenhum micronicho com esse filtro.</div>'; };
+  $("#mi-lg").onchange=rMicro; $("#mi-q").oninput=rMicro; rMicro();
+
+  document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===b));
+    document.querySelectorAll(".sec").forEach(s=>s.classList.toggle("on",s.id==="s-"+b.dataset.s));
+  });
+}
+</script>
+</body>
+</html>

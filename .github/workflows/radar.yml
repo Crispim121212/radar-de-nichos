@@ -1,0 +1,54 @@
+name: Radar de Nichos
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # todo dia às 06:00 de Brasília
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "Argumentos extras (ex.: --grande, ou --temas pesca --idiomas en)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  varrer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -U yt-dlp
+      - name: Varredura
+        run: python radar.py --forcar ${{ github.event.inputs.args }}
+      - name: Salvar resultados no repositório
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add historico site/dados.js cache_canais.json vistos.json
+          git commit -m "Radar $(date -u +%Y-%m-%d)" || echo "nada novo"
+          git pull --rebase -X ours || true
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  publicar:
+    needs: varrer
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

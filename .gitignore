@@ -1,0 +1,4 @@
+*.log
+radar_backup_*.py
+atualizar_radar.bat
+__pycache__/

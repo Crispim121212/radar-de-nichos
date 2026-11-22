@@ -1,0 +1,1091 @@
+{
+ "familias_ricas": {
+  "nome": "Famílias ricas / bilionários",
+  "pt": "família bilionária",
+  "en": "billionaire family",
+  "es": "familia millonaria",
+  "de": "reichste Familie",
+  "fr": "famille milliardaire",
+  "it": "famiglia miliardaria"
+ },
+ "marcas": {
+  "nome": "Donos de marcas / empresas",
+  "pt": "quem é o dono da marca",
+  "en": "who owns brand",
+  "es": "dueño de la marca",
+  "de": "wem gehört Marke",
+  "fr": "à qui appartient la marque",
+  "it": "proprietario del marchio"
+ },
+ "historia_esquecida": {
+  "nome": "História esquecida",
+  "pt": "história esquecida",
+  "en": "forgotten history",
+  "es": "historia olvidada",
+  "de": "vergessene Geschichte",
+  "fr": "histoire oubliée",
+  "it": "storia dimenticata"
+ },
+ "megaprojetos": {
+  "nome": "Megaprojetos / engenharia",
+  "pt": "megaprojeto",
+  "en": "megaproject",
+  "es": "megaproyecto",
+  "de": "Megaprojekt",
+  "fr": "mégaprojet",
+  "it": "megaprogetto"
+ },
+ "lugares_abandonados": {
+  "nome": "Lugares abandonados",
+  "pt": "cidade abandonada",
+  "en": "abandoned city",
+  "es": "ciudad abandonada",
+  "de": "verlassene Stadt",
+  "fr": "ville abandonnée",
+  "it": "città abbandonata"
+ },
+ "misterios": {
+  "nome": "Mistérios não resolvidos",
+  "pt": "mistério não resolvido",
+  "en": "unsolved mystery",
+  "es": "misterio sin resolver",
+  "de": "ungelöstes Rätsel",
+  "fr": "mystère non résolu",
+  "it": "mistero irrisolto"
+ },
+ "crimes": {
+  "nome": "Crimes reais",
+  "pt": "caso real crime",
+  "en": "true crime case",
+  "es": "caso real crimen",
+  "de": "wahrer Kriminalfall",
+  "fr": "affaire criminelle vraie",
+  "it": "caso di cronaca nera"
+ },
+ "guerra": {
+  "nome": "Guerra / história militar",
+  "pt": "segunda guerra história",
+  "en": "ww2 history",
+  "es": "segunda guerra mundial historia",
+  "de": "zweiter Weltkrieg Geschichte",
+  "fr": "seconde guerre mondiale histoire",
+  "it": "seconda guerra mondiale storia"
+ },
+ "geografia": {
+  "nome": "Geografia / mapas / por que",
+  "pt": "por que o mapa",
+  "en": "why geography",
+  "es": "por qué geografía",
+  "de": "warum Geografie",
+  "fr": "pourquoi géographie",
+  "it": "perché geografia"
+ },
+ "economia": {
+  "nome": "Economia / crise / dinheiro",
+  "pt": "crise econômica explicada",
+  "en": "economic collapse explained",
+  "es": "crisis económica explicada",
+  "de": "Wirtschaftskrise erklärt",
+  "fr": "crise économique expliquée",
+  "it": "crisi economica spiegata"
+ },
+ "biografias": {
+  "nome": "Biografias / ascensão e queda",
+  "pt": "ascensão e queda",
+  "en": "rise and fall",
+  "es": "auge y caída",
+  "de": "Aufstieg und Fall",
+  "fr": "ascension et chute",
+  "it": "ascesa e caduta"
+ },
+ "golpes": {
+  "nome": "Golpes / fraudes",
+  "pt": "maior golpe da história",
+  "en": "biggest scam",
+  "es": "mayor estafa",
+  "de": "größter Betrug",
+  "fr": "plus grande arnaque",
+  "it": "truffa più grande"
+ },
+ "desastres": {
+  "nome": "Desastres / tragédias",
+  "pt": "tragédia que mudou",
+  "en": "disaster documentary",
+  "es": "tragedia documental",
+  "de": "Katastrophe Doku",
+  "fr": "catastrophe documentaire",
+  "it": "disastro documentario"
+ },
+ "paises": {
+  "nome": "Países / cidades / curiosidades",
+  "pt": "país mais estranho",
+  "en": "strangest country",
+  "es": "país más extraño",
+  "de": "seltsamstes Land",
+  "fr": "pays le plus étrange",
+  "it": "paese più strano"
+ },
+ "natureza": {
+  "nome": "Natureza / animais",
+  "pt": "animal mais perigoso",
+  "en": "most dangerous animal",
+  "es": "animal más peligroso",
+  "de": "gefährlichstes Tier",
+  "fr": "animal le plus dangereux",
+  "it": "animale più pericoloso"
+ },
+ "espaco": {
+  "nome": "Espaço / ciência",
+  "pt": "universo documentário",
+  "en": "space documentary",
+  "es": "universo documental",
+  "de": "Weltall Doku",
+  "fr": "univers documentaire",
+  "it": "universo documentario"
+ },
+ "religiao": {
+  "nome": "Bíblia / religião / antigos",
+  "pt": "história bíblica",
+  "en": "bible history",
+  "es": "historia bíblica",
+  "de": "Bibel Geschichte",
+  "fr": "histoire biblique",
+  "it": "storia biblica"
+ },
+ "tecnologia": {
+  "nome": "Tecnologia / IA",
+  "pt": "inteligência artificial documentário",
+  "en": "ai documentary",
+  "es": "inteligencia artificial documental",
+  "de": "künstliche Intelligenz Doku",
+  "fr": "intelligence artificielle documentaire",
+  "it": "intelligenza artificiale documentario"
+ },
+ "esporte": {
+  "nome": "Futebol / esporte histórias",
+  "pt": "história do futebol",
+  "en": "football story",
+  "es": "historia del fútbol",
+  "de": "Fußball Geschichte",
+  "fr": "histoire du football",
+  "it": "storia del calcio"
+ },
+ "documentario": {
+  "nome": "Documentário (geral)",
+  "pt": "documentário",
+  "en": "documentary",
+  "es": "documental",
+  "de": "Dokumentation",
+  "fr": "documentaire",
+  "it": "documentario"
+ },
+ "relaxar": {
+  "nome": "Sono / relaxar / ambiente",
+  "pt": "história para dormir",
+  "en": "history for sleep",
+  "es": "historia para dormir",
+  "de": "Geschichte zum Einschlafen",
+  "fr": "histoire pour dormir",
+  "it": "storia per dormire"
+ },
+ "ia_animacao": {
+  "nome": "Animação 3D / IA explicando",
+  "pt": "o que aconteceria se",
+  "en": "what would happen if",
+  "es": "qué pasaría si",
+  "de": "was wäre wenn",
+  "fr": "que se passerait-il si",
+  "it": "cosa succederebbe se"
+ },
+ "drama_bilionario": {
+  "nome": "Histórias dramatizadas (bilionário, vingança)",
+  "pt": "bilionário disfarçado",
+  "en": "billionaire disguised",
+  "es": "millonario disfrazado",
+  "de": "Milliardär verkleidet",
+  "fr": "milliardaire déguisé",
+  "it": "miliardario travestito"
+ },
+ "reddit": {
+  "nome": "Histórias do Reddit / relatos",
+  "pt": "relatos do reddit",
+  "en": "reddit stories",
+  "es": "historias de reddit",
+  "de": "Reddit Geschichten",
+  "fr": "histoires reddit",
+  "it": "storie reddit"
+ },
+ "idosos": {
+  "nome": "Histórias para idosos / lições de vida",
+  "pt": "história de vida emocionante",
+  "en": "emotional life story",
+  "es": "historia de vida emocionante",
+  "de": "bewegende Lebensgeschichte",
+  "fr": "histoire de vie émouvante",
+  "it": "storia di vita commovente"
+ },
+ "animacao_historia": {
+  "nome": "História animada / explicada",
+  "pt": "história animada",
+  "en": "animated history",
+  "es": "historia animada",
+  "de": "animierte Geschichte",
+  "fr": "histoire animée",
+  "it": "storia animata"
+ },
+ "celebridades": {
+  "nome": "Celebridades / o que aconteceu com",
+  "pt": "o que aconteceu com",
+  "en": "what happened to",
+  "es": "qué pasó con",
+  "de": "was wurde aus",
+  "fr": "que devient",
+  "it": "che fine ha fatto"
+ },
+ "carros": {
+  "nome": "Carros / máquinas",
+  "pt": "história da marca de carro",
+  "en": "car brand history",
+  "es": "historia de la marca de autos",
+  "de": "Automarke Geschichte",
+  "fr": "histoire marque automobile",
+  "it": "storia marca auto"
+ },
+ "comida": {
+  "nome": "Comida / origem dos alimentos",
+  "pt": "como é feito",
+  "en": "how it's made",
+  "es": "cómo se hace",
+  "de": "wie wird gemacht",
+  "fr": "comment c'est fabriqué",
+  "it": "come viene fatto"
+ },
+ "saude_idade": {
+  "nome": "Saúde 50+ / longevidade",
+  "pt": "depois dos 60 anos",
+  "en": "after 60",
+  "es": "después de los 60",
+  "de": "ab 60",
+  "fr": "après 60 ans",
+  "it": "dopo i 60 anni"
+ },
+ "terror": {
+  "nome": "Terror / histórias de horror",
+  "pt": "história de terror real",
+  "en": "scary true stories",
+  "es": "historias de terror reales",
+  "de": "Horrorgeschichten wahre",
+  "fr": "histoires d'horreur vraies",
+  "it": "storie horror vere"
+ },
+ "paranormal": {
+  "nome": "Paranormal / sobrenatural",
+  "pt": "caso paranormal",
+  "en": "paranormal encounter",
+  "es": "caso paranormal",
+  "de": "paranormale Erlebnisse",
+  "fr": "phénomène paranormal",
+  "it": "caso paranormale"
+ },
+ "ovnis": {
+  "nome": "Ovnis / aliens",
+  "pt": "ovni avistamento",
+  "en": "ufo sighting",
+  "es": "avistamiento ovni",
+  "de": "UFO Sichtung",
+  "fr": "ovni observation",
+  "it": "avvistamento ufo"
+ },
+ "teorias": {
+  "nome": "Teorias da conspiração",
+  "pt": "teoria da conspiração",
+  "en": "conspiracy theory",
+  "es": "teoría conspirativa",
+  "de": "Verschwörungstheorie",
+  "fr": "théorie du complot",
+  "it": "teoria del complotto"
+ },
+ "antigos": {
+  "nome": "Civilizações antigas / arqueologia",
+  "pt": "civilização antiga",
+  "en": "ancient civilization",
+  "es": "civilización antigua",
+  "de": "antike Zivilisation",
+  "fr": "civilisation antique",
+  "it": "civiltà antica"
+ },
+ "mitologia": {
+  "nome": "Mitologia",
+  "pt": "mitologia grega",
+  "en": "greek mythology",
+  "es": "mitología griega",
+  "de": "griechische Mythologie",
+  "fr": "mythologie grecque",
+  "it": "mitologia greca"
+ },
+ "realeza": {
+  "nome": "Realeza / reis e rainhas",
+  "pt": "família real",
+  "en": "royal family",
+  "es": "familia real",
+  "de": "Königsfamilie",
+  "fr": "famille royale",
+  "it": "famiglia reale"
+ },
+ "psicologia": {
+  "nome": "Psicologia / comportamento",
+  "pt": "psicologia comportamento",
+  "en": "psychology facts",
+  "es": "psicología datos",
+  "de": "Psychologie Fakten",
+  "fr": "psychologie faits",
+  "it": "psicologia curiosità"
+ },
+ "estoicismo": {
+  "nome": "Estoicismo / filosofia",
+  "pt": "estoicismo",
+  "en": "stoicism",
+  "es": "estoicismo",
+  "de": "Stoizismus",
+  "fr": "stoïcisme",
+  "it": "stoicismo"
+ },
+ "motivacional": {
+  "nome": "Motivacional / disciplina",
+  "pt": "motivação disciplina",
+  "en": "motivational speech",
+  "es": "discurso motivacional",
+  "de": "Motivation Rede",
+  "fr": "discours motivation",
+  "it": "discorso motivazionale"
+ },
+ "financas": {
+  "nome": "Finanças pessoais",
+  "pt": "como economizar dinheiro",
+  "en": "how to save money",
+  "es": "cómo ahorrar dinero",
+  "de": "Geld sparen Tipps",
+  "fr": "comment économiser",
+  "it": "come risparmiare soldi"
+ },
+ "investimentos": {
+  "nome": "Investimentos / bolsa",
+  "pt": "investir para iniciantes",
+  "en": "investing for beginners",
+  "es": "invertir para principiantes",
+  "de": "investieren für Anfänger",
+  "fr": "investir débutant",
+  "it": "investire per principianti"
+ },
+ "renda_extra": {
+  "nome": "Renda extra / ganhar dinheiro online",
+  "pt": "renda extra online",
+  "en": "make money online",
+  "es": "ganar dinero online",
+  "de": "online Geld verdienen",
+  "fr": "gagner de l'argent en ligne",
+  "it": "guadagnare online"
+ },
+ "empreendedorismo": {
+  "nome": "Empreendedorismo / negócios",
+  "pt": "como abrir um negócio",
+  "en": "small business ideas",
+  "es": "ideas de negocio",
+  "de": "Geschäftsidee",
+  "fr": "idée business",
+  "it": "idee di business"
+ },
+ "imoveis": {
+  "nome": "Imóveis / casas",
+  "pt": "casa de luxo tour",
+  "en": "luxury house tour",
+  "es": "casa de lujo",
+  "de": "Luxusvilla",
+  "fr": "maison de luxe",
+  "it": "villa di lusso"
+ },
+ "luxo": {
+  "nome": "Luxo / vida dos ricos",
+  "pt": "vida de luxo",
+  "en": "rich lifestyle",
+  "es": "vida de lujo",
+  "de": "Luxusleben",
+  "fr": "vie de luxe",
+  "it": "vita di lusso"
+ },
+ "culinaria": {
+  "nome": "Culinária / receitas",
+  "pt": "receita fácil",
+  "en": "easy recipe",
+  "es": "receta fácil",
+  "de": "einfaches Rezept",
+  "fr": "recette facile",
+  "it": "ricetta facile"
+ },
+ "comida_rua": {
+  "nome": "Comida de rua",
+  "pt": "comida de rua",
+  "en": "street food",
+  "es": "comida callejera",
+  "de": "Streetfood",
+  "fr": "street food",
+  "it": "cibo di strada"
+ },
+ "comida_antiga": {
+  "nome": "Comida antiga / história da comida",
+  "pt": "comida medieval",
+  "en": "medieval food",
+  "es": "comida medieval",
+  "de": "mittelalterliches Essen",
+  "fr": "cuisine médiévale",
+  "it": "cucina medievale"
+ },
+ "sobrevivencia": {
+  "nome": "Sobrevivência / bushcraft",
+  "pt": "sobrevivência na selva",
+  "en": "survival bushcraft",
+  "es": "supervivencia bushcraft",
+  "de": "Überleben Bushcraft",
+  "fr": "survie bushcraft",
+  "it": "sopravvivenza bushcraft"
+ },
+ "construcao": {
+  "nome": "Construção / casas / DIY",
+  "pt": "construindo uma casa",
+  "en": "building a house",
+  "es": "construyendo una casa",
+  "de": "Haus bauen",
+  "fr": "construire une maison",
+  "it": "costruire una casa"
+ },
+ "restauracao": {
+  "nome": "Restauração de objetos",
+  "pt": "restauração antiga",
+  "en": "restoration old",
+  "es": "restauración antigua",
+  "de": "Restaurierung alt",
+  "fr": "restauration ancienne",
+  "it": "restauro vecchio"
+ },
+ "oficios": {
+  "nome": "Ofícios / trabalhos manuais",
+  "pt": "artesão trabalho",
+  "en": "craftsman at work",
+  "es": "artesano trabajo",
+  "de": "Handwerker Arbeit",
+  "fr": "artisan travail",
+  "it": "artigiano lavoro"
+ },
+ "fazenda": {
+  "nome": "Vida no campo / fazenda",
+  "pt": "vida na roça",
+  "en": "farm life",
+  "es": "vida en el campo",
+  "de": "Leben auf dem Bauernhof",
+  "fr": "vie à la ferme",
+  "it": "vita in campagna"
+ },
+ "pets": {
+  "nome": "Pets / cães e gatos",
+  "pt": "cachorro engraçado",
+  "en": "funny dog",
+  "es": "perro gracioso",
+  "de": "lustiger Hund",
+  "fr": "chien drôle",
+  "it": "cane divertente"
+ },
+ "resgate_animais": {
+  "nome": "Resgate de animais",
+  "pt": "resgate de animal",
+  "en": "animal rescue",
+  "es": "rescate animal",
+  "de": "Tierrettung",
+  "fr": "sauvetage animal",
+  "it": "salvataggio animale"
+ },
+ "oceano": {
+  "nome": "Oceano / mar profundo",
+  "pt": "fundo do mar",
+  "en": "deep ocean",
+  "es": "océano profundo",
+  "de": "Tiefsee",
+  "fr": "océan profond",
+  "it": "oceano profondo"
+ },
+ "pesca": {
+  "nome": "Pesca",
+  "pt": "pescaria",
+  "en": "fishing",
+  "es": "pesca",
+  "de": "Angeln",
+  "fr": "pêche",
+  "it": "pesca"
+ },
+ "caca_tesouro": {
+  "nome": "Caça ao tesouro / detector",
+  "pt": "detector de metais",
+  "en": "metal detecting",
+  "es": "detector de metales",
+  "de": "Metalldetektor",
+  "fr": "détecteur de métaux",
+  "it": "metal detector"
+ },
+ "viagem": {
+  "nome": "Viagem / países",
+  "pt": "viagem barata",
+  "en": "travel vlog",
+  "es": "viaje barato",
+  "de": "Reise Vlog",
+  "fr": "voyage vlog",
+  "it": "viaggio vlog"
+ },
+ "vida_exterior": {
+  "nome": "Morar no exterior",
+  "pt": "morar fora do brasil",
+  "en": "moving abroad",
+  "es": "vivir en el extranjero",
+  "de": "Auswandern",
+  "fr": "vivre à l'étranger",
+  "it": "vivere all'estero"
+ },
+ "cidades": {
+  "nome": "Cidades / urbanismo",
+  "pt": "cidade mais perigosa",
+  "en": "most dangerous city",
+  "es": "ciudad más peligrosa",
+  "de": "gefährlichste Stadt",
+  "fr": "ville la plus dangereuse",
+  "it": "città più pericolosa"
+ },
+ "transporte": {
+  "nome": "Trens / aviões / navios",
+  "pt": "maior navio do mundo",
+  "en": "biggest ship",
+  "es": "barco más grande",
+  "de": "größtes Schiff",
+  "fr": "plus grand navire",
+  "it": "nave più grande"
+ },
+ "aviacao": {
+  "nome": "Aviação / acidentes aéreos",
+  "pt": "acidente aéreo",
+  "en": "plane crash",
+  "es": "accidente aéreo",
+  "de": "Flugzeugabsturz",
+  "fr": "accident d'avion",
+  "it": "incidente aereo"
+ },
+ "militar": {
+  "nome": "Armas e tecnologia militar",
+  "pt": "tanque de guerra",
+  "en": "military technology",
+  "es": "tecnología militar",
+  "de": "Militärtechnik",
+  "fr": "technologie militaire",
+  "it": "tecnologia militare"
+ },
+ "politica": {
+  "nome": "Política / geopolítica",
+  "pt": "geopolítica explicada",
+  "en": "geopolitics explained",
+  "es": "geopolítica explicada",
+  "de": "Geopolitik erklärt",
+  "fr": "géopolitique expliquée",
+  "it": "geopolitica spiegata"
+ },
+ "noticias": {
+  "nome": "Notícias explicadas",
+  "pt": "entenda o caso",
+  "en": "explained news",
+  "es": "caso explicado",
+  "de": "Fall erklärt",
+  "fr": "affaire expliquée",
+  "it": "caso spiegato"
+ },
+ "tribunal": {
+  "nome": "Tribunal / julgamentos",
+  "pt": "julgamento real",
+  "en": "courtroom",
+  "es": "juicio real",
+  "de": "Gerichtsverhandlung",
+  "fr": "procès réel",
+  "it": "processo reale"
+ },
+ "prisao": {
+  "nome": "Prisões / vida na cadeia",
+  "pt": "vida na prisão",
+  "en": "prison life",
+  "es": "vida en prisión",
+  "de": "Leben im Gefängnis",
+  "fr": "vie en prison",
+  "it": "vita in prigione"
+ },
+ "mafia": {
+  "nome": "Máfia / cartéis / gângsteres",
+  "pt": "história da máfia",
+  "en": "mafia history",
+  "es": "historia de la mafia",
+  "de": "Mafia Geschichte",
+  "fr": "histoire de la mafia",
+  "it": "storia della mafia"
+ },
+ "espionagem": {
+  "nome": "Espionagem",
+  "pt": "espião história real",
+  "en": "spy true story",
+  "es": "espía historia real",
+  "de": "Spion wahre Geschichte",
+  "fr": "espion histoire vraie",
+  "it": "spia storia vera"
+ },
+ "medicina": {
+  "nome": "Medicina / casos médicos",
+  "pt": "caso médico raro",
+  "en": "rare medical case",
+  "es": "caso médico raro",
+  "de": "seltener medizinischer Fall",
+  "fr": "cas médical rare",
+  "it": "caso medico raro"
+ },
+ "corpo_humano": {
+  "nome": "Corpo humano / ciência",
+  "pt": "corpo humano curiosidades",
+  "en": "human body facts",
+  "es": "cuerpo humano datos",
+  "de": "menschlicher Körper Fakten",
+  "fr": "corps humain",
+  "it": "corpo umano curiosità"
+ },
+ "fitness": {
+  "nome": "Fitness / musculação",
+  "pt": "treino em casa",
+  "en": "home workout",
+  "es": "entrenamiento en casa",
+  "de": "Training zuhause",
+  "fr": "entraînement maison",
+  "it": "allenamento a casa"
+ },
+ "emagrecer": {
+  "nome": "Emagrecimento / dieta",
+  "pt": "como emagrecer",
+  "en": "weight loss",
+  "es": "bajar de peso",
+  "de": "abnehmen",
+  "fr": "perdre du poids",
+  "it": "dimagrire"
+ },
+ "beleza": {
+  "nome": "Beleza / maquiagem",
+  "pt": "maquiagem tutorial",
+  "en": "makeup tutorial",
+  "es": "tutorial maquillaje",
+  "de": "Make-up Tutorial",
+  "fr": "tutoriel maquillage",
+  "it": "tutorial trucco"
+ },
+ "moda": {
+  "nome": "Moda / estilo",
+  "pt": "estilo masculino",
+  "en": "men's style",
+  "es": "estilo hombre",
+  "de": "Herrenmode",
+  "fr": "style homme",
+  "it": "stile uomo"
+ },
+ "relacionamentos": {
+  "nome": "Relacionamentos",
+  "pt": "relacionamento conselhos",
+  "en": "relationship advice",
+  "es": "consejos de pareja",
+  "de": "Beziehung Tipps",
+  "fr": "conseils couple",
+  "it": "consigli di coppia"
+ },
+ "maternidade": {
+  "nome": "Maternidade / família",
+  "pt": "vida de mãe",
+  "en": "mom life",
+  "es": "vida de mamá",
+  "de": "Mama Alltag",
+  "fr": "vie de maman",
+  "it": "vita da mamma"
+ },
+ "infantil": {
+  "nome": "Infantil / desenhos",
+  "pt": "história infantil",
+  "en": "kids story",
+  "es": "cuento infantil",
+  "de": "Kindergeschichte",
+  "fr": "histoire pour enfants",
+  "it": "storia per bambini"
+ },
+ "educacao": {
+  "nome": "Educação / aprender",
+  "pt": "aprenda inglês",
+  "en": "learn english",
+  "es": "aprender inglés",
+  "de": "Englisch lernen",
+  "fr": "apprendre l'anglais",
+  "it": "imparare inglese"
+ },
+ "matematica": {
+  "nome": "Matemática / lógica / enigmas",
+  "pt": "enigma de lógica",
+  "en": "logic puzzle",
+  "es": "acertijo lógico",
+  "de": "Logikrätsel",
+  "fr": "énigme logique",
+  "it": "indovinello logico"
+ },
+ "quiz": {
+  "nome": "Quiz / testes",
+  "pt": "quiz de conhecimentos gerais",
+  "en": "general knowledge quiz",
+  "es": "quiz cultura general",
+  "de": "Allgemeinwissen Quiz",
+  "fr": "quiz culture générale",
+  "it": "quiz cultura generale"
+ },
+ "games": {
+  "nome": "Games / jogos",
+  "pt": "história do jogo",
+  "en": "video game history",
+  "es": "historia de videojuegos",
+  "de": "Videospiel Geschichte",
+  "fr": "histoire du jeu vidéo",
+  "it": "storia dei videogiochi"
+ },
+ "minecraft": {
+  "nome": "Minecraft / sandbox",
+  "pt": "minecraft",
+  "en": "minecraft",
+  "es": "minecraft",
+  "de": "minecraft",
+  "fr": "minecraft",
+  "it": "minecraft"
+ },
+ "gta": {
+  "nome": "GTA / mundo aberto",
+  "pt": "gta 6",
+  "en": "gta 6",
+  "es": "gta 6",
+  "de": "gta 6",
+  "fr": "gta 6",
+  "it": "gta 6"
+ },
+ "retro": {
+  "nome": "Games retrô / nostalgia",
+  "pt": "nostalgia anos 90",
+  "en": "90s nostalgia",
+  "es": "nostalgia de los 90",
+  "de": "90er Nostalgie",
+  "fr": "nostalgie années 90",
+  "it": "nostalgia anni 90"
+ },
+ "anime": {
+  "nome": "Anime / mangá",
+  "pt": "anime explicado",
+  "en": "anime explained",
+  "es": "anime explicado",
+  "de": "Anime erklärt",
+  "fr": "anime expliqué",
+  "it": "anime spiegato"
+ },
+ "filmes": {
+  "nome": "Filmes / resumo de filmes",
+  "pt": "resumo de filme",
+  "en": "movie recap",
+  "es": "resumen de película",
+  "de": "Film Zusammenfassung",
+  "fr": "résumé de film",
+  "it": "riassunto film"
+ },
+ "series": {
+  "nome": "Séries / explicação",
+  "pt": "série explicada",
+  "en": "series explained",
+  "es": "serie explicada",
+  "de": "Serie erklärt",
+  "fr": "série expliquée",
+  "it": "serie spiegata"
+ },
+ "musica": {
+  "nome": "Música / história de músicas",
+  "pt": "história da música",
+  "en": "song story",
+  "es": "historia de la canción",
+  "de": "Geschichte des Songs",
+  "fr": "histoire de la chanson",
+  "it": "storia della canzone"
+ },
+ "lofi": {
+  "nome": "Música ambiente / lofi / foco",
+  "pt": "música para estudar",
+  "en": "study music",
+  "es": "música para estudiar",
+  "de": "Musik zum Lernen",
+  "fr": "musique pour étudier",
+  "it": "musica per studiare"
+ },
+ "instrumentos": {
+  "nome": "Instrumentos / tocar",
+  "pt": "aula de violão",
+  "en": "guitar lesson",
+  "es": "clases de guitarra",
+  "de": "Gitarre lernen",
+  "fr": "cours de guitare",
+  "it": "lezione di chitarra"
+ },
+ "humor": {
+  "nome": "Humor / comédia",
+  "pt": "vídeos engraçados",
+  "en": "funny moments",
+  "es": "momentos graciosos",
+  "de": "lustige Momente",
+  "fr": "moments drôles",
+  "it": "momenti divertenti"
+ },
+ "pegadinhas": {
+  "nome": "Pegadinhas / experimentos sociais",
+  "pt": "experimento social",
+  "en": "social experiment",
+  "es": "experimento social",
+  "de": "soziales Experiment",
+  "fr": "expérience sociale",
+  "it": "esperimento sociale"
+ },
+ "asmr": {
+  "nome": "ASMR",
+  "pt": "asmr",
+  "en": "asmr",
+  "es": "asmr",
+  "de": "asmr",
+  "fr": "asmr",
+  "it": "asmr"
+ },
+ "satisfatorio": {
+  "nome": "Vídeos satisfatórios / processos",
+  "pt": "vídeo satisfatório",
+  "en": "oddly satisfying",
+  "es": "video satisfactorio",
+  "de": "befriedigendes Video",
+  "fr": "vidéo satisfaisante",
+  "it": "video soddisfacente"
+ },
+ "fabricas": {
+  "nome": "Fábricas / como é produzido",
+  "pt": "fábrica produção",
+  "en": "factory production",
+  "es": "fábrica producción",
+  "de": "Fabrik Produktion",
+  "fr": "usine production",
+  "it": "fabbrica produzione"
+ },
+ "carros_luxo": {
+  "nome": "Supercarros / luxo",
+  "pt": "carro mais caro",
+  "en": "most expensive car",
+  "es": "auto más caro",
+  "de": "teuerstes Auto",
+  "fr": "voiture la plus chère",
+  "it": "auto più costosa"
+ },
+ "motos": {
+  "nome": "Motos",
+  "pt": "moto viagem",
+  "en": "motorcycle",
+  "es": "moto viaje",
+  "de": "Motorrad",
+  "fr": "moto voyage",
+  "it": "moto viaggio"
+ },
+ "caminhoes": {
+  "nome": "Caminhões / estradas",
+  "pt": "caminhoneiro",
+  "en": "truck driver",
+  "es": "camionero",
+  "de": "LKW Fahrer",
+  "fr": "routier",
+  "it": "camionista"
+ },
+ "religiao_fe": {
+  "nome": "Fé / oração / pregação",
+  "pt": "oração poderosa",
+  "en": "powerful prayer",
+  "es": "oración poderosa",
+  "de": "kraftvolles Gebet",
+  "fr": "prière puissante",
+  "it": "preghiera potente"
+ },
+ "espiritualidade": {
+  "nome": "Espiritualidade / esoterismo",
+  "pt": "signos",
+  "en": "zodiac signs",
+  "es": "signos zodiacales",
+  "de": "Sternzeichen",
+  "fr": "signes astrologiques",
+  "it": "segni zodiacali"
+ },
+ "sonhos": {
+  "nome": "Sonhos / significado",
+  "pt": "significado dos sonhos",
+  "en": "dream meaning",
+  "es": "significado de los sueños",
+  "de": "Traumdeutung",
+  "fr": "signification des rêves",
+  "it": "significato dei sogni"
+ },
+ "ia_noticias": {
+  "nome": "IA / ferramentas novas",
+  "pt": "ferramenta de ia",
+  "en": "ai tools",
+  "es": "herramientas de ia",
+  "de": "KI Tools",
+  "fr": "outils ia",
+  "it": "strumenti ia"
+ },
+ "celular": {
+  "nome": "Celular / tech review",
+  "pt": "melhor celular",
+  "en": "best smartphone",
+  "es": "mejor celular",
+  "de": "bestes Handy",
+  "fr": "meilleur smartphone",
+  "it": "miglior smartphone"
+ },
+ "programacao": {
+  "nome": "Programação",
+  "pt": "aprender programação",
+  "en": "learn coding",
+  "es": "aprender programación",
+  "de": "programmieren lernen",
+  "fr": "apprendre à coder",
+  "it": "imparare a programmare"
+ },
+ "historia_brasil": {
+  "nome": "História regional / país",
+  "pt": "história do país",
+  "en": "history of country",
+  "es": "historia del país",
+  "de": "Geschichte des Landes",
+  "fr": "histoire du pays",
+  "it": "storia del paese"
+ },
+ "idade_media": {
+  "nome": "Idade Média",
+  "pt": "idade média",
+  "en": "medieval history",
+  "es": "edad media",
+  "de": "Mittelalter",
+  "fr": "moyen âge",
+  "it": "medioevo"
+ },
+ "roma": {
+  "nome": "Roma / impérios",
+  "pt": "império romano",
+  "en": "roman empire",
+  "es": "imperio romano",
+  "de": "Römisches Reich",
+  "fr": "empire romain",
+  "it": "impero romano"
+ },
+ "egito": {
+  "nome": "Egito antigo",
+  "pt": "egito antigo",
+  "en": "ancient egypt",
+  "es": "antiguo egipto",
+  "de": "altes Ägypten",
+  "fr": "egypte ancienne",
+  "it": "antico egitto"
+ },
+ "dinossauros": {
+  "nome": "Dinossauros / pré-história",
+  "pt": "dinossauros",
+  "en": "dinosaurs",
+  "es": "dinosaurios",
+  "de": "Dinosaurier",
+  "fr": "dinosaures",
+  "it": "dinosauri"
+ },
+ "clima": {
+  "nome": "Clima / tempestades",
+  "pt": "tempestade extrema",
+  "en": "extreme weather",
+  "es": "clima extremo",
+  "de": "Extremwetter",
+  "fr": "météo extrême",
+  "it": "meteo estremo"
+ },
+ "vulcoes": {
+  "nome": "Vulcões / terremotos",
+  "pt": "vulcão",
+  "en": "volcano eruption",
+  "es": "volcán",
+  "de": "Vulkanausbruch",
+  "fr": "éruption volcan",
+  "it": "eruzione vulcano"
+ },
+ "cronicas": {
+  "nome": "Contos / crônicas / audiobook",
+  "pt": "conto narrado",
+  "en": "audiobook story",
+  "es": "cuento narrado",
+  "de": "Hörbuch Geschichte",
+  "fr": "livre audio histoire",
+  "it": "audiolibro racconto"
+ },
+ "biblia_historias": {
+  "nome": "Histórias da Bíblia narradas",
+  "pt": "história de davi",
+  "en": "bible stories",
+  "es": "historias bíblicas",
+  "de": "Bibelgeschichten",
+  "fr": "histoires bibliques",
+  "it": "storie bibliche"
+ },
+ "idosos_dicas": {
+  "nome": "Dicas para aposentados",
+  "pt": "aposentadoria",
+  "en": "retirement tips",
+  "es": "jubilación consejos",
+  "de": "Rente Tipps",
+  "fr": "retraite conseils",
+  "it": "pensione consigli"
+ },
+ "jardinagem": {
+  "nome": "Jardinagem / plantas",
+  "pt": "jardinagem",
+  "en": "gardening tips",
+  "es": "jardinería",
+  "de": "Gartentipps",
+  "fr": "jardinage",
+  "it": "giardinaggio"
+ },
+ "limpeza": {
+  "nome": "Limpeza / organização",
+  "pt": "limpeza pesada",
+  "en": "deep cleaning",
+  "es": "limpieza profunda",
+  "de": "Grundreinigung",
+  "fr": "nettoyage",
+  "it": "pulizia profonda"
+ },
+ "compras": {
+  "nome": "Compras / produtos testados",
+  "pt": "testando produtos",
+  "en": "testing products",
+  "es": "probando productos",
+  "de": "Produkte testen",
+  "fr": "test produits",
+  "it": "provando prodotti"
+ },
+ "supermercado": {
+  "nome": "Supermercado / preços",
+  "pt": "preço no supermercado",
+  "en": "grocery prices",
+  "es": "precios supermercado",
+  "de": "Supermarkt Preise",
+  "fr": "prix supermarché",
+  "it": "prezzi supermercato"
+ }
+}
