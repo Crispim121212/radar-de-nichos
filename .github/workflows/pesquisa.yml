@@ -1,0 +1,26 @@
+name: Pesquisa avulsa
+
+on:
+  workflow_dispatch:
+    inputs:
+      script:
+        description: "Script em pesquisas/ (ex.: gta_vida_real.py)"
+        required: true
+
+jobs:
+  pesquisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -U yt-dlp
+      - name: Rodar
+        working-directory: pesquisas
+        run: python ${{ github.event.inputs.script }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resultado
+          path: pesquisas/*.json
