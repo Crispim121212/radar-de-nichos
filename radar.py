@@ -2,7 +2,7 @@
 Uso: python radar.py [--forcar] [--temas a,b] [--idiomas pt,en]
 Gera site/dados.js (lido por site/index.html) e historico/AAAA-MM-DD.json.
 """
-import sys, json, time, math, datetime, pathlib, urllib.parse, urllib.request, statistics, threading
+import re, sys, json, time, math, datetime, pathlib, urllib.parse, urllib.request, statistics, threading
 from concurrent.futures import ThreadPoolExecutor
 from yt_dlp import YoutubeDL
 from analise import idioma_titulo, micronichos, pequeno_recente
@@ -118,13 +118,17 @@ def raio_x(cid):
                 v30=sum(1 for v in vs if v >= 30000), v100=sum(1 for v in vs if v >= 100000),
                 mediana=int(statistics.median(vs)) if vs else 0, soma=sum(vs),
                 ultimos=[dict(id=e["id"], t=e.get("title"), v=e.get("view_count")) for e in ents[:6]])
-    if ents and len(ents) <= 45:  # canal de até 20 dias raramente tem mais que isso
-        try:
-            o = ydl("full").extract_info(f"https://www.youtube.com/watch?v={ents[-1]['id']}", download=False) or {}
-            d = o.get("upload_date")
-            if d: info["inicio"] = f"{d[:4]}-{d[4:6]}-{d[6:]}"
-        except Exception:
-            pass
+    # data de criação do canal pelo feed RSS (exata, não é bloqueado em servidor)
+    try:
+        req = urllib.request.Request(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            datas = re.findall(r"<published>([^<]+)</published>", r.read().decode("utf-8", "ignore"))
+        if datas:
+            info["inicio"] = datas[0][:10]
+            if len(datas) - 1 < 15 and len(datas) > 1:
+                info["primeiro_video"] = datas[-1][:10]
+    except Exception:
+        pass
     time.sleep(0.8)
     return cid, info
 
@@ -171,7 +175,7 @@ def main():
     cache = carregar(CACHE, {})
     def precisa(cid):
         c = cache.get(cid)
-        return not c or "v30" not in c or datetime.date.fromisoformat(c["checado"]) <= datetime.date.today() - datetime.timedelta(days=3)
+        return not c or "v30" not in c or not c.get("inicio") or datetime.date.fromisoformat(c["checado"]) <= datetime.date.today() - datetime.timedelta(days=3)
     def checar(cids):
         alvo = [c for c in cids if precisa(c)]
         log(f"raio-x de {len(alvo)} canais ({len(cids) - len(alvo)} do cache)")
